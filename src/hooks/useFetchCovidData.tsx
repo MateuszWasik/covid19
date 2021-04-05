@@ -3,7 +3,7 @@ import { DataResponse } from '../components/dashboard/Dashboard.component'
 
 
 export const useFetchCovidData = () => {
-  const [data, setData] = useState<DataResponse>({countries: [], global: {}, id: ''})
+  const [data, setData] = useState<DataResponse>({countries: [], global: {}, date: '', id: ''})
   const [error, setError] = useState({errorMessage: {}, isError: false})
 
   useEffect(() => {
@@ -15,6 +15,7 @@ export const useFetchCovidData = () => {
             setData({
               countries: result.Countries,
               global: result.Global,
+              date: result.Global.Date,
               id: result.Id
             })
           })

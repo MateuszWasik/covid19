@@ -20,6 +20,7 @@ export interface DataResponse {
   id: string
   global: object
   countries: CovidData[]
+  date: string
 }
 
 export function Dashboard({countries}: Partial<DataResponse>) {
@@ -29,12 +30,11 @@ export function Dashboard({countries}: Partial<DataResponse>) {
 
   useEffect(() => {
     setCountriesList(countries)
-
   },[countries])
 
   useEffect(() => {
-    const ele = countriesList?.find(country => country.Country === countryName)
-    if (ele) setTooltipElement(ele)
+    const countryFound = countriesList?.find(country => country.Country === countryName)
+    if (countryFound) setTooltipElement(countryFound)
     },[countryName])
 
   return (
