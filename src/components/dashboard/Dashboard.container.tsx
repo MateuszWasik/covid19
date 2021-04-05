@@ -4,11 +4,16 @@ import { Dashboard } from './Dashboard.component'
 
 export function DashboardContainer() {
 
-  const {data} = useFetchCovidData()
+  const {data, error} = useFetchCovidData()
 
-  return(
+  return (
     <>
-    <Dashboard />
+      {
+        data && <Dashboard countries={data.countries}/>
+      }
+      {
+        error.isError && <h1>Error</h1>
+      }
     </>
   )
 

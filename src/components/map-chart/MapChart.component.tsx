@@ -20,8 +20,8 @@ export function MapChart({setTooltipContent}: Props) {
               key={geo.rsmKey}
               geography={geo}
               onMouseEnter={() => {
-                const { NAME } = geo.properties;
-                setTooltipContent(NAME)
+                const { NAME_LONG } = geo.properties;
+                setTooltipContent(NAME_LONG)
               }}
               style={{
                 default: {
