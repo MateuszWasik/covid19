@@ -35,6 +35,7 @@ export function Dashboard({countries}: Partial<DataResponse>) {
   useEffect(() => {
     const countryFound = countriesList?.find(country => country.Country === countryName)
     if (countryFound) setTooltipElement(countryFound)
+    //eslint-disable-next-line react-hooks/exhaustive-deps
     },[countryName])
 
   return (
