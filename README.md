@@ -13,8 +13,6 @@ Project was created for learning purposes.
 - React Hooks
 - TypeScript
 - SCSS
-- React-Simple-Maps 
-- React-Tooltip
 - Postman Covid-19 API
 - Netlify CI
 
